@@ -99,35 +99,10 @@ h1,h2,h3,h4,h5,h6 {
     text-align:left;
   }
   // viaggio
-  &#viaggio {
-    .container > div {
-      margin: 0 50px;
-      text-align:left;
-      p {
-        line-height: 35px;
-      }
-      background: rgba(0,0,0,.7);
-      padding:10px; 
-    }
-    h1 {
-      font-family: @font1;
-      text-transform:uppercase;
-      margin-bottom: 15px;
-      text-shadow: 0 0 7px #000;
-    }
-    span {
-          
-    }
-    //text-shadow: 0 0 7px #000;
-    background: url(../img/china2-low.jpg) no-repeat center top @alt;
-    //background-size: 100% auto;
-    padding: 150px 0;
-    color: #fff;
-  }
   .fa-heart {
     color: @heart-color;
     &.thanks {
-      text-shadow: 0 0 10px #fff;
+      color: @alt-text;
     }
   }
   // contatti
@@ -137,6 +112,33 @@ h1,h2,h3,h4,h5,h6 {
     }
   }
 }
+// pranzo 
+#pranzo {
+  .jumbotron {
+    text-align:left;    
+  }
+}
+#viaggio {
+  h1 {
+    font-family: @font1;
+    text-transform:uppercase;
+    font-size: 120px;
+    text-shadow: 0 0 7px #000;
+  }
+  .jumbotron {
+    text-align:left;
+    p.iban {
+      font-family:Arial,sans-serif;
+    }
+    &.bg {
+      background: url(../img/china2-low.jpg) no-repeat center center;
+      padding: 200px 0;
+      color: #fff;
+      text-align:center;
+    }
+  }
+}
+  
 #parking {
     height: 500px;
     width:100%;
@@ -155,8 +157,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (max-width: 500px) {
-  #viaggio.jumbotron {
-    //background-size: auto 100%;
-    //padding: 100px 0 0 0;
+  #viaggio {
+    .jumbotron {
+      h1 {
+        font-size: 70px;      
+      }
+    }
   }
 }
+

@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@import 'elements.less';
+
+@red: darken(#d9534f,5%);
+@alt : @red;
+@alt-text: #fff;
+@logo-color: #000;
+@heart-color: @red;
+@height:400px;
+@radius:120px;
+@font1: 'PT Sans Narrow', sans-serif;
+@font2: 'Alegreya Sans', sans-serif;
+@bodyTop: 50px;
+
+body {
+  padding-top:@bodyTop;
+}
+
+body,
+h1,h2,h3,h4,h5,h6 {
+  font-family: @font2;
+}
+
+.navbar-inverse {
+  background: rgba(0,0,0,.85);
+  font-family: @font2;
+  font-size: 20px;
+  top:-60px;
+  div.col {
+    > .navbar-nav > li {
+        > a {
+          color: #fff;
+          padding: 12px 20px 18px 20px;
+        }
+    }
+  }
+}
+
+/* logo */
+#logo {
+  .container {
+    height: @radius/2;
+    text-align:center;
+    position:relative;
+  }
+  
+  h1 {
+    margin:0;
+    font-size: 30px;
+    //line-height: 15px;
+    color: #fff;
+    font-family: @font1;
+    //font-weight:700;
+    text-transform:uppercase;
+    .fa-heart {
+      color: @heart-color;
+      font-size: 40px;
+    }
+    &.small a {
+      text-decoration:none;
+      color: #fff;
+      .fa-heart {
+        font-size: 24px;
+        font-weight:700;
+        color: @heart-color;
+      } 
+    }
+  }
+  .logo-container {
+    .box-shadow(0 0 7px #000);
+    padding-top: 1.2*@radius;
+    position:absolute;
+    left: 50%;
+    top: -1*@radius;
+    margin-left:-@radius;
+    background: @logo-color;
+    width: 2*@radius;
+    height: 2*@radius;
+    .rounded(@radius);
+  }
+}
+/* jumbotron */
+.jumbotron {
+  font-size: 18px;
+  font-weight:normal;
+  background: none;
+  text-align:center;
+  &#home {
+    padding-top: @radius - @bodyTop;
+  }
+  margin-bottom:0;
+  &.alt {
+    background: @alt;
+    color: @alt-text;
+  }
+  // cerimonia 
+  &#cerimonia {
+    text-align:left;
+  }
+  // viaggio
+  &#viaggio {
+    .container > div {
+      margin: 0 50px;
+      text-align:left;
+      p {
+        line-height: 35px;
+      }
+      background: rgba(0,0,0,.7);
+      padding:10px; 
+    }
+    h1 {
+      font-family: @font1;
+      text-transform:uppercase;
+      margin-bottom: 15px;
+      text-shadow: 0 0 7px #000;
+    }
+    span {
+          
+    }
+    //text-shadow: 0 0 7px #000;
+    background: url(../img/china2-low.jpg) no-repeat center top @alt;
+    //background-size: 100% auto;
+    padding: 150px 0;
+    color: #fff;
+  }
+  .fa-heart {
+    color: @heart-color;
+    &.thanks {
+      text-shadow: 0 0 10px #fff;
+    }
+  }
+  // contatti
+  &#contatti {
+    .fa-heart {
+        margin-top: 100px;
+    }
+  }
+}
+#parking {
+    height: 500px;
+    width:100%;
+    background: url(../img/parking.jpg) no-repeat center center;
+}
+.mobile {
+  #logo {
+    top:-60px;
+    h1#big {
+      margin: -40px 0 10px 0;
+    }  
+  }
+  .navbar-inverse {
+    top:0;
+  } 
+}
+
+@media (max-width: 500px) {
+  #viaggio.jumbotron {
+    //background-size: auto 100%;
+    //padding: 100px 0 0 0;
+  }
+}

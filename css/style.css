@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+body {
+  padding-top: 50px;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.navbar-inverse {
+  background: rgba(0, 0, 0, 0.85);
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 20px;
+  top: -60px;
+}
+.navbar-inverse div.col > .navbar-nav > li > a {
+  color: #fff;
+  padding: 12px 20px 18px 20px;
+}
+/* logo */
+#logo .container {
+  height: 60px;
+  text-align: center;
+  position: relative;
+}
+#logo h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+}
+#logo h1 .fa-heart {
+  color: #d43f3a;
+  font-size: 40px;
+}
+#logo h1.small a {
+  text-decoration: none;
+  color: #fff;
+}
+#logo h1.small a .fa-heart {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d43f3a;
+}
+#logo .logo-container {
+  -webkit-box-shadow: 0 0 7px #000000;
+  -moz-box-shadow: 0 0 7px #000000;
+  box-shadow: 0 0 7px #000000;
+  padding-top: 144px;
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  margin-left: -120px;
+  background: #000000;
+  width: 240px;
+  height: 240px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  border-radius: 120px;
+}
+/* jumbotron */
+.jumbotron {
+  font-size: 18px;
+  font-weight: normal;
+  background: none;
+  text-align: center;
+  margin-bottom: 0;
+}
+.jumbotron#home {
+  padding-top: 70px;
+}
+.jumbotron.alt {
+  background: #d43f3a;
+  color: #ffffff;
+}
+.jumbotron#cerimonia {
+  text-align: left;
+}
+.jumbotron#viaggio {
+  background: url(../img/china2-low.jpg) no-repeat center top #d43f3a;
+  padding: 150px 0;
+  color: #fff;
+}
+.jumbotron#viaggio .container > div {
+  margin: 0 50px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+.jumbotron#viaggio .container > div p {
+  line-height: 35px;
+}
+.jumbotron#viaggio h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: 0 0 7px #000;
+}
+.jumbotron .fa-heart {
+  color: #d43f3a;
+}
+.jumbotron .fa-heart.thanks {
+  text-shadow: 0 0 10px #fff;
+}
+.jumbotron#contatti .fa-heart {
+  margin-top: 100px;
+}
+#parking {
+  height: 500px;
+  width: 100%;
+  background: url(../img/parking.jpg) no-repeat center center;
+}
+.mobile #logo {
+  top: -60px;
+}
+.mobile #logo h1#big {
+  margin: -40px 0 10px 0;
+}
+.mobile .navbar-inverse {
+  top: 0;
+}
+@media (max-width: 500px) {
+  
+}
